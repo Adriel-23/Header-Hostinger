@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --primary-color: #673de6;
+    --secondary-color: #eaeaff;
+    --green-var-color: #00b090;
+    --background-cards-color: #1f1346;
+    --font-family: 'DM Sans', sans-serif;
+    --font-primary-color: #1d1e20;
+    --white-color: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    background-color: #fff;
+    height: 200vh;
+}
+.kodee-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px 8px 8px;
+    border-radius: 100px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 8px;
+    border: none;
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    width: 120px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 29px 40px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+.main-logo {
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+li:hover {
+    opacity: 0.8;
+}
+.with-chevron-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}/* Sin esto los 3 items con chevron se comportan independientes y con direction-column, no sacar */
+li {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+}/* Necesario para "acomodar" el chevron */
+a {
+    text-decoration: none;
+    color: var(--font-primary-color);
+}/* Necesario por ser anclas, saca el estilo defecto */
+.access-buttons {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}/* 17px de gap porque suma al padding del boton y da los 32 que tiene Hostinger*/
+button {
+    padding: 11px 15px;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #161718;
+    cursor: pointer;
+    background-color: transparent;
+    
+}/* El cursor pointer es por diversión */
+.language-text:hover {
+    opacity: 0.8;
+}
+.my-account:hover {
+    border-color: #161718c0;
+    opacity: 0.8;
+}
+.language {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+}
+.language-icon {
+    width: 32px;
+    height: 20px;
+}/* tamaño del icono de lenguaje: Necesario */
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section {
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-banner {
+    width: 880px;
+}/* No tiene el tamaño de Hostinger original pero queda lindo */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: center
+}
+.hero-overline {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.off {
+    color: var(--primary-color);
+    display: inline-block;
+}
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.hero-list {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 16px;
+}
+.hero-list li {
+    gap: 10px;
+    margin-bottom: 2px;
+}
+.tick {
+    width: 24px;
+}
+.question-mark {
+    width: 16px;
+    cursor: pointer;
+}
+.start-now {
+    padding: 11px 47px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+}
+.start-now:hover {
+    background-color: #5025d1;
+}
+span {
+    display: flex;
+    align-items: center;
+}/* Sin este span no queda alineado */
+.money-protect {
+    width: 16px;
+    margin-right: 4px;
+}  
