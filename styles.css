@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 
 :root {
-    --primary-color: #673de6;
+    --primary-color-400: #673de6;
+    --primary-color-500: #2f1c6a;
+    --primary-color-600: #1f1346;
+    --primary-color-700: #5025d1;
     --secondary-color: #eaeaff;
     --green-var-color: #00b090;
-    --background-cards-color: #1f1346;
     --font-family: 'DM Sans', sans-serif;
     --font-primary-color: #1d1e20;
     --white-color: #ffffff;
@@ -23,19 +25,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-400);
     color: white;
     padding: 8px 16px 8px 8px;
     border-radius: 100px;
     line-height: 24px;
     font-size: 14px;
-    font-weight: 700;
     gap: 8px;
     border: none;
     position: fixed;
     bottom: 14px;
     right: 14px;
     width: 120px;
+}
+.kodee-button:hover {
+    background-color: var(--primary-color-700);
+}
+button {
+    padding: 11px 15px;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #161718;
+    cursor: pointer;
+    background-color: transparent;
+    
+}/* El cursor pointer es por diversión */
+.generic-button {
+    padding: 11px 47px;
+    background-color: var(--primary-color-400);
+    color: #fff;
+    border: none;
+}
+.generic-button:hover {
+    background-color: var(--primary-color-700);
 }
 header {
     display: flex;
@@ -85,17 +109,6 @@ a {
     gap: 17px;
     align-items: center;
 }/* 17px de gap porque suma al padding del boton y da los 32 que tiene Hostinger*/
-button {
-    padding: 11px 15px;
-    border-radius: 8px;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 16px;
-    border: 1px solid #161718;
-    cursor: pointer;
-    background-color: transparent;
-    
-}/* El cursor pointer es por diversión */
 .language-text:hover {
     opacity: 0.8;
 }
@@ -123,7 +136,6 @@ button {
     align-items: center;
 }
 .hero-section {
-    width: 1300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,7 +166,7 @@ h1 {
 }
 .hero-list {
     flex-direction: column;
-    gap: 12px;
+    gap: 0px;
     font-size: 16px;
 }
 .hero-list li {
@@ -170,13 +182,6 @@ h1 {
 }
 .start-now {
     padding: 11px 47px;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 16px;
-    border: none;
-}
-.start-now:hover {
-    background-color: #5025d1;
 }
 span {
     display: flex;
