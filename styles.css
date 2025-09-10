@@ -94,6 +94,7 @@ ul {
 }/* Sin esto los 3 items con chevron se comportan independientes y con direction-column, no sacar */
 li {
     display: flex;
+    align-items: center;
     gap: 4px;
 }/* Necesario para "acomodar" el chevron */
 nav ul li :hover{
