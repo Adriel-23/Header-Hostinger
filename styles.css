@@ -18,9 +18,10 @@
     font-family: var(--font-family);
 }
 body {
-    background-color: #fff;
-    height: 200vh;
     line-height: 24px;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 .kodee-button {
     display: flex;
@@ -62,6 +63,11 @@ button {
 .generic-button:hover {
     background-color: var(--primary-color-400);
 }
+/* HEADER INICIO
+-
+-
+-
+-*/
 header {
     display: flex;
     justify-content: space-between;
@@ -69,6 +75,7 @@ header {
     top: 0;
     background-color: #fff;
     padding: 29px 40px;
+    width: 100%;
 }
 nav {
     display: flex;
@@ -129,6 +136,28 @@ a {
     width: 32px;
     height: 20px;
 }/* tamaño del icono de lenguaje: Necesario */
+.menu-button {
+    display: none;
+    border: none;
+    padding: 0;
+}
+.menu-button svg {
+    width: 24px;
+    height: auto;
+}
+
+/* FIN HEADER
+    -
+    -
+    -
+    -
+    - */
+
+/* MAIN INICIO
+-
+-
+-
+- */
 .hero-container {
     width: 100%;
     display: flex;
@@ -142,6 +171,7 @@ a {
     padding-right: 40px;
     width: 100%;
     max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -188,6 +218,8 @@ h1 {
 }
 .tick {
     width: 24px;
+    vertical-align: middle;
+    min-width: 24px;
 }
 .question-mark {
     width: 16px;
@@ -204,8 +236,6 @@ span {
     width: 16px;
     margin-right: 4px;
 } 
-
-
 .migration-section {
     color: var(--white-color);
     width: 100%;
@@ -220,7 +250,8 @@ span {
     letter-spacing: 0.7px
 }
 .migration-section-content-container {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,7 +285,8 @@ span {
 .cards-block {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     background-color: var(--primary-color-500);
     padding: 32px;
     border-radius: 16px;
@@ -285,5 +317,184 @@ span {
 .migration-section-content-container button {
     margin-top: 48px;
 }
-/* 09/09/25 Recordatorio:
-Falta hacer el footer y luego responsive. Las demas secciones estan terminadas, tal vez se pueda mejorar pero por ahora falta hacer el footer */
+/* FIN MAIN
+    -
+    -
+    -
+    - */
+
+
+/* INICIO FOOTER
+-
+-
+-
+- */
+footer {
+    background-color: #f4f5ff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.footer-content {
+    max-width: 1208px;
+    width: 100%;
+    display: flex;
+    padding: 0 40px;
+    margin: 56px auto 0 auto;
+    flex-direction: column;
+}
+.footer-logo-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+footer .social {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+.social-icon {
+    display: flex;
+    gap: 16px;
+}
+.social-icon svg {
+    width: 32px;
+    cursor: pointer;
+}
+.social-icon :hover {
+    opacity: 0.7;
+}
+.payment {
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.payment-methods {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.payment-methods a {
+    color: var(--primary-color-300);
+    font-weight: 700;
+}
+.payment-methods img {
+    height: 40px;
+    border: #6ea0d34d 1px solid;
+    border-radius: 6px;
+}
+.legal-links {
+    display: flex;
+    gap: 16px;
+}
+.legal-links :hover {
+    color: #5025d1;
+}
+.cookies-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    gap: 128px;
+    justify-content: space-between;
+    border-top: #6ea0d34d 1px solid;
+}
+.cookies-section p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* RESPONSIVE 320PX */
+@media (max-width: 320px) {
+    header {
+        padding:16px 20px;
+    }
+    header ul {
+        display: none;
+    }
+    header .access-buttons {
+        display: none;
+    }
+    .menu-button {
+        display: flex;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .social {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    footer .social .social-icon {
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 0 8px;
+        padding: 16px 0;
+    }
+    .footer-content {
+        padding: 0 16px;
+    }
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .payment {
+        flex-direction: column-reverse;
+        gap: 16px;
+    }
+    .payment-methods {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .cookies-section {
+        flex-direction: column; 
+        gap: 8px;
+        align-items: start;
+    }
+    .start-now {
+        padding: 0 50px;
+    }
+    .hero-container {
+        margin: 0px;
+        padding: 14px 0 36px;
+    }
+    .hero-section {
+        flex-direction: column;
+        padding: 0 16px;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-text {
+        align-items: center;
+    }
+    main h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .hero-overline {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .hero-list {
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        justify-content: start;
+        gap: 8px;
+    }
+}
+
+/* RESPONSIVE 480PX */
+@media (max-width: 480px) {
+
+}
