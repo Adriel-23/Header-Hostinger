@@ -414,7 +414,7 @@ footer .social {
     line-height: 24px;
 }
 /* RESPONSIVE 320PX */
-@media (max-width: 320px) {
+@media (max-width: 480px) {
     header {
         padding:16px 20px;
     }
