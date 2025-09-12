@@ -60,6 +60,9 @@ button {
     color: #fff;
     border: none;
 }
+main .start-now {
+    padding: 11px 47px;
+}
 .generic-button:hover {
     background-color: var(--primary-color-400);
 }
@@ -223,10 +226,8 @@ h1 {
 }
 .question-mark {
     width: 16px;
+    min-width: 16px;
     cursor: pointer;
-}
-.start-now {
-    padding: 11px 47px;
 }
 span {
     display: flex;
@@ -414,7 +415,16 @@ footer .social {
     line-height: 24px;
 }
 /* RESPONSIVE 320PX */
-@media (max-width: 480px) {
+@media (min-width: 480px) and (max-width: 767px) {
+    footer .footer-logo-section .social .social-icon {
+        justify-content: right;
+    }
+    .footer-logo-section .social {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
     header {
         padding:16px 20px;
     }
@@ -461,9 +471,6 @@ footer .social {
         gap: 8px;
         align-items: start;
     }
-    .start-now {
-        padding: 0 50px;
-    }
     .hero-container {
         margin: 0px;
         padding: 14px 0 36px;
@@ -475,7 +482,7 @@ footer .social {
         align-items: center;
     }
     .hero-text {
-        align-items: center;
+        align-items: start;
     }
     main h1 {
         font-size: 24px;
@@ -486,15 +493,41 @@ footer .social {
         line-height: 24px;
     }
     .hero-list {
-        font-size: 16px;
         line-height: 24px;
         display: flex;
         justify-content: start;
-        gap: 8px;
     }
+    .hero-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    main .start-now {
+        width: 100%;
+    }
+    .migration-head h2 {
+        font-size: 24px;
+    }
+    .cards-container {
+        padding: 0 16px;
+    }
+
 }
 
 /* RESPONSIVE 480PX */
-@media (max-width: 480px) {
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    header ul {
+        display: none;
+    }
+    header .access-buttons {
+        display: none;
+    }
+    .menu-button {
+        display: flex;
+    }
+    .payment {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
 }
